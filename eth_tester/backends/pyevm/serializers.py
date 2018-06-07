@@ -91,7 +91,7 @@ def serialize_transaction_receipt(block, receipts, transaction, transaction_inde
     if transaction_index == 0:
         origin_gas = 0
     else:
-        origin_gas = receipt.gas_used - receipts[transaction_index - 1].gas_used
+        origin_gas = receipts[transaction_index - 1].gas_used
 
     return {
         "transaction_hash": transaction.hash,
